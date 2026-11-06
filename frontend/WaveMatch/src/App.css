@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Design tokens: every one-off colour from the old App.css lives here once. */
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-ink: #100812;        /* page background */
+  --color-surface: #190c19;    /* cards */
+  --color-pink: #ed77b9;       /* main accent */
+  --color-pink-soft: #e7a3cb;  /* labels */
+  --color-pink-light: #f28bc8; /* icons */
+  --color-brand: #e875b6;
+  --color-muted: #9e879b;
+  --color-dim: #806d80;
+  --color-faint: #725c70;
+  --color-danger: #ff91a8;
+
+  --shadow-record:
+    0 0 0 9px rgba(221, 75, 157, 0.07),
+    0 0 0 19px rgba(221, 75, 157, 0.035),
+    0 0 55px rgba(218, 66, 153, 0.4);
+  --shadow-record-hover:
+    0 0 0 12px rgba(221, 75, 157, 0.09),
+    0 0 0 23px rgba(221, 75, 157, 0.045),
+    0 0 70px rgba(218, 66, 153, 0.55);
+
+  --animate-record-pulse: record-pulse 1.5s infinite;
+  @keyframes record-pulse {
+    50% {
+      box-shadow:
+        0 0 0 13px rgba(245, 65, 110, 0.12),
+        0 0 0 27px rgba(245, 65, 110, 0.04),
+        0 0 65px rgba(245, 65, 110, 0.6);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply min-h-screen min-w-[320px] bg-ink font-sans text-white;
+  }
+}
